@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "llama-mcp-streamlit"
+name = "llama_mcp_streamlit"
 version = "0.0.1"
 description = "This project is an interactive AI assistant built with Streamlit, Nvidia NIM's API (LLaMa 3.3:70b)/Ollama, and Model Control Protocol (MCP). It provides a conversational interface where you can interact with an LLM to execute real-time external tools via MCP, retrieve data, and perform actions seamlessly. The assistant supports custom model selection, API configuration, and tool integration, enhancing usability and real-time data processing capabilities while maintaining a user-friendly chat-based experience."
 authors = ["Nikunj2003 <njkhitha2003@gmail.com>"]
