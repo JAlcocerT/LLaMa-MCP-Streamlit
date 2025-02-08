@@ -1,6 +1,11 @@
 import streamlit as st
 from openai import AsyncOpenAI
 from config import AVAILABLE_MODELS
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
 
 def sidebar():
     with st.sidebar:
@@ -21,14 +26,14 @@ def sidebar():
         # Add Model Input
         new_model = st.text_input("Add New Model")
         if st.button("Add Model"):
-            if new_model not in AVAILABLE_MODELS and new_model != "":  
+            if new_model not in AVAILABLE_MODELS and new_model.strip():
                 AVAILABLE_MODELS.append(new_model)
-                st.experimental_rerun()  
+                st.experimental_rerun()
 
         # API Configuration
         st.subheader("API Configuration")
-        api_endpoint = st.text_input("API Endpoint", "https://integrate.api.nvidia.com/v1")
-        api_key = st.text_input("API Key", "", type="password")
+        api_endpoint = st.text_input("API Endpoint", os.getenv("API_ENDPOINT"))
+        api_key = st.text_input("API Key", os.getenv("API_KEY", ""), type="password")
 
         # Initialize OpenAI client
         client = AsyncOpenAI(

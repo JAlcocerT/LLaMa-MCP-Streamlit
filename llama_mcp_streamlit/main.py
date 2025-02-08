@@ -3,8 +3,7 @@ import streamlit as st
 from ui.sidebar import sidebar
 from ui.chat_ui import chat_ui
 from utils.mcp_client import MCPClient
-from config import server_params
-
+from utils.mcp_server import server_params
 async def main():
     st.set_page_config(layout="wide")
 
