@@ -16,6 +16,8 @@ The assistant supports:
 ![Tools Screenshot](screenshot/Screenshot3.png)
 
 ![Chat Screenshot](screenshot/Screenshot2.png)
+
+![Chat (What can you do?) Screenshot](screenshot/Screenshot4.png)
 ---
 
 ## 📁 Project Structure
