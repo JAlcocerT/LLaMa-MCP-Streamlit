@@ -1,5 +1,13 @@
 # Default NVIDIA NIM API model ID
-DEFAULT_MODEL_ID = "meta/llama-3.3-70b-instruct"
+DEFAULT_MODEL_ID = "llama3.2" #"meta/llama-3.3-70b-instruct"
+#DEFAULT_MODEL_ID = "llama3.3:70b-instruct-q2_K"
+
+
+#https://ollama.com/library/llama3.2
+#deepcoder:1.5b
+#ollama run llama3.2
+#ollama pull llama3.2
+
 # Initialize AVAILABLE_MODELS with the default model
 AVAILABLE_MODELS = [DEFAULT_MODEL_ID]
 

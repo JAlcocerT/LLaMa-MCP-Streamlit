@@ -1,13 +1,32 @@
-version: "3.8"
+#version: "3.8"
+
+# services:
+#   llm_app:
+#     build: .
+#     container_name: llm_assistant
+#     ports:
+#       - "8501:8501"
+#     env_file:
+#       - .env
+#     volumes:
+#       - .:/app
+#     restart: always
+
 
 services:
   llm_app:
-    build: .
     container_name: llm_assistant
+    image: st_mcp_server
     ports:
       - "8501:8501"
     env_file:
       - .env
     volumes:
       - .:/app
+    command: tail -f /dev/null
     restart: always
+
+volumes:
+  st_data:
+
+##docker exec -it llm_assistant /bin/bash 

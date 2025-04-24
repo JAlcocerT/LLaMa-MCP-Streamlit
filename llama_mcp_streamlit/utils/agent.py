@@ -1,7 +1,7 @@
 import json
 from typing import List
 from openai import AsyncOpenAI
-from config import DEFAULT_MODEL_ID, SYSTEM_PROMPT
+from llama_mcp_streamlit.config import DEFAULT_MODEL_ID, SYSTEM_PROMPT
 
 async def agent_loop(query: str, tools: dict, client: AsyncOpenAI, messages: List[dict] = None, model: str = DEFAULT_MODEL_ID):
     messages = (

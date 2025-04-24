@@ -1,6 +1,6 @@
 import streamlit as st
 from openai import AsyncOpenAI
-from config import AVAILABLE_MODELS
+from llama_mcp_streamlit.config import AVAILABLE_MODELS
 from dotenv import load_dotenv
 import os
 
